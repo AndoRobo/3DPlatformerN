@@ -63,6 +63,9 @@ public class GetHit : MonoBehaviour
         playerMovementScript.playerStats.canMove = false;
         playerMovementScript.soundManager.PlayHitSound();
         StartCoroutine("Recover");
+        playerMovementScript.playerStats.health--;
+        Debug.Log("Health" + playerMovementScript.playerStats.health);
+        
     }
     private IEnumerator Recover()
     {
