@@ -46540,71 +46540,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201208795}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1209625128
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1702972586}
-    m_Modifications:
-    - target: {fileID: 474535854810020278, guid: 2990722572487fc499c55dae4c7f6f99, type: 3}
-      propertyPath: m_Name
-      value: EnemyBasic (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 999292741061141260, guid: 2990722572487fc499c55dae4c7f6f99, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 999292741061141260, guid: 2990722572487fc499c55dae4c7f6f99, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 999292741061141260, guid: 2990722572487fc499c55dae4c7f6f99, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 999292741061141260, guid: 2990722572487fc499c55dae4c7f6f99, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 18.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 999292741061141260, guid: 2990722572487fc499c55dae4c7f6f99, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 999292741061141260, guid: 2990722572487fc499c55dae4c7f6f99, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 999292741061141260, guid: 2990722572487fc499c55dae4c7f6f99, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 999292741061141260, guid: 2990722572487fc499c55dae4c7f6f99, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 999292741061141260, guid: 2990722572487fc499c55dae4c7f6f99, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 999292741061141260, guid: 2990722572487fc499c55dae4c7f6f99, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 999292741061141260, guid: 2990722572487fc499c55dae4c7f6f99, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126610934276876371, guid: 2990722572487fc499c55dae4c7f6f99, type: 3}
-      propertyPath: m_Volume
-      value: 0.4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2990722572487fc499c55dae4c7f6f99, type: 3}
 --- !u!1001 &1234785284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57297,11 +57232,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4393376238707335508, guid: 1bc2aa75963a4804a81d244473f65eb2, type: 3}
   m_PrefabInstance: {fileID: 1523576459}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1543904103 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 999292741061141260, guid: 2990722572487fc499c55dae4c7f6f99, type: 3}
-  m_PrefabInstance: {fileID: 1209625128}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1549437206 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1641040697658525796, guid: e931804d05e6ee04080b042341db8d0e, type: 3}
@@ -59111,7 +59041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1684486807
 Transform:
   m_ObjectHideFlags: 0
@@ -59414,7 +59344,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1913723039}
-  - {fileID: 1543904103}
   - {fileID: 1285440139}
   - {fileID: 414959875}
   m_Father: {fileID: 206173411}
@@ -61951,7 +61880,7 @@ MonoBehaviour:
   enemyStats:
     shouldJump: 1
     jumpVelocity: 500
-    explodeDist: 0
+    explodeDist: 4.17
   enemyExplosionParticles: {fileID: 4912132913345027125, guid: efc9b2d72ccad9047a7b8d97a0bbe96e, type: 3}
   playerTransform: {fileID: 543450652763914464}
 --- !u!65 &1779896510
@@ -68180,7 +68109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1299055526086228024
 Transform:
   m_ObjectHideFlags: 0

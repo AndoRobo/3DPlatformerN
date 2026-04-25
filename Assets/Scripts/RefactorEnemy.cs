@@ -70,26 +70,44 @@ public class RefactorEnemy : MonoBehaviour
                     }
                 }
         }
-        else if (enemyStats.idle == false)
+        else 
         {
-            //Chase the player
-             sight.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
-             transform.LookAt(sight);
-             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, Time.deltaTime * enemyStats.chaseSpeed);
-           
-            //Explode if we get within the enemyStats.explodeDist
-            if (Vector3.Distance(transform.position, player.transform.position) < enemyStats.explodeDist)
-            {
-                StartCoroutine("Explode");
-                enemyStats.idle = true;
-            }
+           ChasePlayer();
+           CheckExplode();
         }
 
+        
+        CheckSlipping();
+
+       
+    }
+
+    private void ChasePlayer()
+    {
+        //Chase the player
+        sight.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+        transform.LookAt(sight);
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, Time.deltaTime * enemyStats.chaseSpeed);
+
+    }
+
+    private void CheckExplode()
+    {
+        //Explode if we get within the enemyStats.explodeDist
+        if (Vector3.Distance(transform.position, player.transform.position) < enemyStats.explodeDist)
+        {
+            StartCoroutine("Explode");
+            enemyStats.idle = true;
+        }
+    }
+
+    private void CheckSlipping()
+    {
         // stops enemy from following player up the inaccessible slopes
         if (slipping == true)
         {
             transform.Translate(Vector3.back * 20 * Time.deltaTime, Space.World);
-        }
+        } 
     }
     private void OnCollisionEnter(Collision other)
     {
